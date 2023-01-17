@@ -25,9 +25,9 @@ public class EnemySpawner : MonoBehaviour
         enemyCount = FindObjectsOfType<Enemy>().Length;
         if (enemyCount == 0)
         {
-            waveCount++;
             spawnEnemyWave(waveCount);
             Instantiate(powerupPrefab, generateSpawnPosition(), powerupPrefab.transform.rotation);
+            waveCount++;
         }
     }
     void spawnEnemyWave (int enemiesToSpawn)
